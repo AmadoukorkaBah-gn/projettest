@@ -1,0 +1,73 @@
+.login-form {
+  max-width: 420px;
+  margin: 24px auto;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border: 2px solid orange;    
+  border-radius: 12px;           
+  font-family: "Times New Roman", Times, serif;
+}
+.login-form button:hover {
+  background-color: orange;    
+  color: white;               
+}
+
+.login-form label {
+  display: block;
+  margin-top: 12px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.login-form button {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 8px;           
+  border: 2px solid orange;     
+  background-color: white;      
+  color: orange;               
+  font-family: "Times New Roman", Times, serif;  
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.register-link {
+  margin-top: 16px;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.register-button {
+  margin-left: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;          
+  border: 2px solid orange;    
+  background: white;            
+  color: orange;                
+  font-family: "Times New Roman", Times, serif; 
+  transition: background-color 0.3s, color 0.3s;
+}
+.register-button:hover {
+  background-color: orange;
+  color: white;
+}
+.login-form,{
+  width: 100%;
+  max-width: 400px;            
+  background-color: white;
+  padding: 30px 25px;
+  border: 2px solid orange;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;      
+}
+
+

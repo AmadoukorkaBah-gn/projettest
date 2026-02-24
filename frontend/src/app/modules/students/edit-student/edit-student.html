@@ -1,0 +1,16 @@
+<form [formGroup]="studentForm" (ngSubmit)="submitEditForm()">
+  <input formControlName="name" placeholder="Nom" />
+  <input formControlName="prenom" placeholder="Prénom" />
+  <input type="date" formControlName="date_naissance" />
+  <input formControlName="adresse" placeholder="Adresse" />
+  <input formControlName="tel" placeholder="Téléphone" />
+  <input formControlName="pere" placeholder="Père" />
+  <input formControlName="mere" placeholder="Mère" />
+
+  <div class="form-buttons">
+    <button type="submit" class="btn-add">Mettre à jour</button>
+    <button type="button" class="btn-cancel" (click)="close.emit()">Annuler</button>
+  </div>
+
+  <div class="alert error" *ngIf="errorMessage">{{ errorMessage }}</div>
+</form>

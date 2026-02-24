@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Ajouter un étudiant</h2>
+
+  <div class="alert success" *ngIf="successMessage">{{ successMessage }}</div>
+  <div class="alert error" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  <form [formGroup]="studentForm" (ngSubmit)="submitAddForm()">
+    <input formControlName="name" placeholder="Nom" />
+    <input formControlName="prenom" placeholder="Prénom" />
+    <input type="date" formControlName="date_naissance" />
+    <input formControlName="adresse" placeholder="Adresse" />
+    <input formControlName="tel" placeholder="Téléphone" />
+    <input formControlName="pere" placeholder="Père" />
+    <input formControlName="mere" placeholder="Mère" />
+    <div class="form-buttons">
+      <button type="submit" class="btn-add">Ajouter</button>
+      <button type="button" class="btn-cancel" (click)="studentForm.reset()">Annuler</button>
+    </div>
+  </form>
+</div>

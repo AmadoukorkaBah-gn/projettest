@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>Gestion des étudiants</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Date de naissance</th>
+        <th>Adresse</th>
+        <th>Téléphone</th>
+        <th>Père</th>
+        <th>Mère</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.name }}</td>
+        <td>{{ student.prenom }}</td>
+        <td>{{ student.date_naissance }}</td>
+        <td>{{ student.adresse }}</td>
+        <td>{{ student.tel }}</td>
+        <td>{{ student.pere }}</td>
+        <td>{{ student.mere }}</td>
+        <td>
+          <button (click)="openEditModal(student)" class="btn-edit">Modifier</button>
+          <button (click)="deleteStudent(student.id)" class="btn-delete">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 🔹 Modal de modification -->
+  <div class="modal-backdrop" *ngIf="isEditModalOpen">
+    <div class="modal">
+      <h3>Modifier l'étudiant</h3>
+      <app-edit-student
+  [studentForm]="studentForm"
+  [editId]="editId"
+  [token]="token"
+  (close)="closeEditModal()"
+  (updated)="loadStudents()"
+></app-edit-student>
+
+    </div>
+  </div>
+</div>
