@@ -1,7 +1,12 @@
 <div class="container">
   <h2>Gestion des étudiants</h2>
 
-  <table>
+  <div *ngIf="isLoading" class="loading"></div>
+  <div *ngIf="students.length === 0">
+
+  </div>
+
+  <table *ngIf="students.length > 0">
     <thead>
       <tr>
         <th>Nom</th>
@@ -31,18 +36,17 @@
     </tbody>
   </table>
 
-  <!-- 🔹 Modal de modification -->
+  <!-- Modal de modification -->
   <div class="modal-backdrop" *ngIf="isEditModalOpen">
     <div class="modal">
       <h3>Modifier l'étudiant</h3>
       <app-edit-student
-  [studentForm]="studentForm"
-  [editId]="editId"
-  [token]="token"
-  (close)="closeEditModal()"
-  (updated)="loadStudents()"
-></app-edit-student>
-
+        [studentForm]="studentForm"
+        [editId]="editId"
+        [token]="token"
+        (close)="closeEditModal()"
+        (updated)="loadStudents()"
+      ></app-edit-student>
     </div>
   </div>
 </div>

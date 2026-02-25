@@ -17,6 +17,22 @@ input:focus {
   box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
   outline: none;
 }
+.btn-add {
+  background-color: #07eb66;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.btn-cancel {
+  background-color: #eb3c07;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
 
 .form-buttons {
   grid-column: 1 / -1;

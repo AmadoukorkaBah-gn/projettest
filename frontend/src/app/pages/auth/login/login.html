@@ -1,22 +1,24 @@
-<div class="login-form">
-  <h2>Connexion</h2>
-
-  <!-- Formulaire de connexion lié au backend Laravel /login -->
-  <form (ngSubmit)="login()">
-    <label>Email</label>
-    <input type="email" [(ngModel)]="email" name="email" required />
-
-    <label>Mot de passe</label>
-    <input type="password" [(ngModel)]="password" name="password" required />
-
-    <button type="submit">Se connecter</button>
-  </form>
-
-  <!-- Texte + bouton d'inscription en bas -->
-  <p class="register-link">
-    Vous n'avez pas de compte ?
-    <button type="button" routerLink="/register" class="register-button">
-      Inscrivez-vous
-    </button>
+<div class="login-container">
+  <div class="login-form">
+    <h2>Connexion</h2>
+    <p class="intro-text">
+    Bienvenue ! Remplissez le formulaire ci-dessous pour vous connectez.
   </p>
+
+    <!-- Formulaire de connexion -->
+    <form (ngSubmit)="login()">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="email" name="email" required />
+      <label>Mot de passe</label>
+      <input type="password" [(ngModel)]="password" name="password" required />
+      <button type="submit">Se connecter</button>
+    </form>
+    <!-- Texte + bouton de connexion -->
+    <p class="register-link">
+      Vous n'avez pas de compte ?
+      <button type="button" routerLink="/register" class="register-button">
+        Inscrivez-vous
+      </button>
+    </p>
+  </div>
 </div>

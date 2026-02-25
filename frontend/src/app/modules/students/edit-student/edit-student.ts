@@ -38,8 +38,8 @@ export class EditStudentComponent {
         next: () => {
           this.successMessage = 'Étudiant modifié avec succès.';
           this.editFormSubmitted = false;
-          this.updated.emit(); // Notifie le parent pour recharger la liste
-          this.close.emit();   // Ferme le modal
+          this.updated.emit(); 
+          this.close.emit();   
         },
         error: (err) => {
           this.errorMessage = err?.error?.message || 'Erreur lors de la modification.';

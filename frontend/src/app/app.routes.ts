@@ -28,5 +28,5 @@ export const routes: Routes = [
         (m) => m.StudentsModule
       ),
   },
-  { path: '**', redirectTo: 'home' },
+  { path: '**', redirectTo: 'login' },
 ];

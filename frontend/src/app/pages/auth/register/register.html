@@ -1,5 +1,9 @@
+<div class="register-container">
 <div class="register-form">
   <h2>Inscription</h2>
+  <p class="intro-text">
+    Bienvenue ! Remplissez le formulaire ci-dessous pour créer votre compte.
+  </p>
   <form (ngSubmit)="register()">
     <label>Nom</label>
     <input type="text" [(ngModel)]="name" name="name" required />
@@ -9,8 +13,15 @@
 
     <label>Mot de passe</label>
     <input type="password" [(ngModel)]="password" name="password" required />
-
+  
     <button type="submit">S'inscrire</button>
   </form>
+   <p class="login-link">
+      Avez-vous un compte ?
+      <button type="button" routerLink="/login" class="login-button">
+        Connectez-vous
+      </button>
+    </p>
+</div>
 </div>
 

@@ -15,7 +15,15 @@ th, td {
   padding: 10px;
   text-align: left;
 }
+table thead {
+  background-color: #8d5c02; 
+  color: rgb(223, 93, 18);               
+}
 
+table th {
+  padding: 8px 12px;
+  text-align: left;
+}
 th {
   background: #f9fafb;
   font-weight: bold;

@@ -33,6 +33,14 @@ input:focus {
   padding: 8px 16px;
   cursor: pointer;
 }
+.btn-cancel {
+  background-color: #eb3c07;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
 
 .btn-add:hover {
   background-color: #1e4bb8;
@@ -50,7 +58,7 @@ input:focus {
 .alert.error {
   background: #fef2f2;
   color: #991b1b;
-  border: 1px solid #f97373;
+  border: 1px solid #f11919;
   padding: 10px;
   border-radius: 4px;
   margin-top: 10px;
