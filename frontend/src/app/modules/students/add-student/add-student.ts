@@ -49,7 +49,7 @@ export class AddStudentComponent implements OnInit {
         this.router.navigate(['/students']);
       },
       error: (err) => {
-        this.errorMessage = err?.error?.message || 'Erreur lors de l’ajout';
+        this.errorMessage = err?.error?.message || "Erreur lors de l'ajout de l'étudiant.";
       },
     });
   }
